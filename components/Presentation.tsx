@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2 } from "lucide-react";
 import { useRef } from "react";
 
+import { FataLogo } from "@/components/FataLogo";
 import { SLIDE_COMPONENTS, SLIDE_COUNT } from "@/components/slides/deck";
 import { SlideContainer } from "@/components/slides/SlideContainer";
 import { Button } from "@/components/ui/button";
@@ -24,39 +24,26 @@ export function Presentation() {
   const { isFullscreen, toggle } = useFullscreen(shellRef);
 
   const Current = SLIDE_COMPONENTS[index];
-  const progress = ((index + 1) / total) * 100;
 
   return (
     <div
       ref={shellRef}
-      className="relative flex min-h-dvh flex-col bg-background text-foreground"
+      className="relative flex h-dvh max-h-dvh flex-col overflow-hidden overscroll-none bg-background pb-[max(0.75rem,env(safe-area-inset-bottom))] pl-[max(0px,env(safe-area-inset-left))] pr-[max(0px,env(safe-area-inset-right))] pt-[max(0px,env(safe-area-inset-top))] text-foreground"
     >
       <a
         href="#contenu-slide"
-        className="absolute left-4 top-4 z-[60] -translate-y-[200%] rounded-lg bg-primary px-4 py-3 text-sm font-medium text-primary-foreground shadow-md transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+        className="absolute left-[max(1rem,env(safe-area-inset-left))] top-[max(1rem,env(safe-area-inset-top))] z-[60] -translate-y-[200%] rounded-lg bg-primary px-4 py-3 text-sm font-medium text-primary-foreground shadow-md transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
       >
         Aller au contenu de la slide
       </a>
 
-      <div
-        className="pointer-events-none fixed left-0 right-0 top-0 z-50 h-1 bg-border"
-        aria-hidden
-      >
-        <motion.div
-          className="h-full bg-primary"
-          initial={false}
-          animate={{ width: `${progress}%` }}
-          transition={{ type: "spring", stiffness: 120, damping: 24 }}
-        />
-      </div>
-
-      <header className="flex shrink-0 items-center justify-between gap-4 px-4 py-4 sm:px-8">
-        <span className="rounded-md bg-accent px-2 py-1 font-mono text-sm font-semibold text-foreground">
-          fata
-        </span>
-        <div className="flex items-center gap-2 sm:gap-3">
+      <header className="flex min-h-12 min-w-0 shrink-0 flex-wrap items-center justify-between gap-2 px-3 py-2 sm:min-h-14 sm:gap-3 sm:px-5 sm:py-2.5 md:px-7">
+        <div className="flex min-w-0 items-center">
+          <FataLogo priority className="sm:h-9 md:h-10" />
+        </div>
+        <div className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
           <span
-            className="tabular-nums text-sm text-muted-foreground"
+            className="tabular-nums text-xs text-muted-foreground sm:text-sm"
             aria-live="polite"
             aria-atomic="true"
           >
@@ -85,19 +72,19 @@ export function Presentation() {
       <main
         id="contenu-slide"
         tabIndex={-1}
-        className="flex flex-1 flex-col outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+        className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background"
       >
         <SlideContainer slideKey={index} direction={direction}>
           <Current />
         </SlideContainer>
       </main>
 
-      <footer className="flex shrink-0 items-center justify-center gap-4 px-4 py-6 sm:gap-6 sm:py-8">
+      <footer className="flex min-h-[3.75rem] shrink-0 items-center justify-center gap-3 px-3 py-3 sm:min-h-16 sm:gap-5 sm:px-4 sm:py-4 md:py-5">
         <Button
           type="button"
           variant="outline"
           size="icon"
-          className="h-12 w-12 rounded-full border-border transition-transform hover:scale-105 active:scale-95"
+          className="h-11 w-11 touch-manipulation rounded-full border-border transition-transform hover:scale-105 active:scale-95 sm:h-12 sm:w-12"
           disabled={isFirst}
           onClick={goPrev}
           aria-label="Slide précédente"
@@ -108,7 +95,7 @@ export function Presentation() {
           type="button"
           variant="default"
           size="icon"
-          className="h-12 w-12 rounded-full bg-primary shadow-md transition-transform hover:scale-105 active:scale-95"
+          className="h-11 w-11 touch-manipulation rounded-full bg-primary shadow-md transition-transform hover:scale-105 active:scale-95 sm:h-12 sm:w-12"
           disabled={isLast}
           onClick={goNext}
           aria-label="Slide suivante"

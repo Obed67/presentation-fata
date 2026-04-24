@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   title: "fata — Présentation",
   description:
     "Présentation interactive : fata, application d’apprentissage de la programmation pour la jeunesse africaine.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
