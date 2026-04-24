@@ -33,7 +33,9 @@ export function Slide01Hook() {
           )}
         >
           Apprendre à coder, ce n’est pas difficile…{" "}
-          <span className="text-muted-foreground">mais y rester, ça l’est.</span>
+          <span className="text-muted-foreground">
+            mais y rester, ça l’est.
+          </span>
         </h1>
       </SlideReveal>
     </SlideLayout>
@@ -147,9 +149,9 @@ export function Slide04WhatIsFata() {
 
       <SlideReveal delay={0.1} className="w-full max-w-xl">
         <p className="text-center text-sm leading-relaxed text-muted-foreground sm:text-base">
-          <strong className="text-foreground">App + web</strong> · nouvelle école
-          de <strong className="text-foreground">programmation</strong> pour
-          apprendre autrement.
+          <strong className="text-foreground">App + web</strong> · nouvelle
+          école de <strong className="text-foreground">programmation</strong>{" "}
+          pour apprendre autrement.
         </p>
       </SlideReveal>
 
@@ -191,7 +193,9 @@ export function Slide05Mission() {
             "mx-auto max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg",
           )}
         >
-          Numérique accessible — mobile, web, au rythme de chacun.
+          Numérique accessible :{" "}
+          <span className="text-foreground">mobile</span>,{" "}
+          <span className="text-foreground">web</span>, au rythme de chacun.
         </p>
       </SlideReveal>
     </SlideLayout>
@@ -201,15 +205,15 @@ export function Slide05Mission() {
 const HOW_PILLARS = [
   {
     title: "Apprendre vite",
-    text: "Micro-leçons, XP, classements — rester motivé au quotidien.",
+    text: "Micro-leçons, XP, classements. Rester motivé au quotidien.",
   },
   {
     title: "Coder pour de vrai",
-    text: "Python, web, IA… exercices et pratique, pas que de la théorie.",
+    text: "Python, web, IA… Exercices et pratique, pas que de la théorie.",
   },
   {
     title: "Partout",
-    text: "Android, iOS et web — et une communauté pour progresser ensemble.",
+    text: "Android, iOS et web : et une communauté pour progresser ensemble.",
   },
   {
     title: "Défis",
@@ -405,7 +409,7 @@ export function Slide11Cta() {
             "mx-auto max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg",
           )}
         >
-          Télécharge l’application sur le site officiel —{" "}
+          Télécharge l’application sur le site officiel{" "}
           <strong className="font-medium text-foreground">App Store</strong>,{" "}
           <strong className="font-medium text-foreground">Google Play</strong>{" "}
           et accès web.
@@ -425,14 +429,6 @@ export function Slide11Cta() {
             Ouvrir fata.dev
           </Link>
         </Button>
-        <a
-          href="https://fata.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-        >
-          https://fata.dev/
-        </a>
       </SlideReveal>
     </SlideLayout>
   );
@@ -442,7 +438,10 @@ export function Slide12Signature() {
   return (
     <SlideLayout align="center" contentMax="2xl" centered>
       <div className="grid w-full max-w-4xl grid-cols-1 items-center gap-10 md:grid-cols-[auto_1fr] md:items-start md:gap-12 lg:gap-16">
-        <SlideReveal delay={0.08} className="flex justify-center md:justify-start">
+        <SlideReveal
+          delay={0.08}
+          className="flex justify-center md:justify-start"
+        >
           <div className="relative aspect-[3/4] w-52 shrink-0 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl ring-2 ring-accent/45 sm:w-56 md:w-60 lg:w-64">
             <Image
               src="/obed.png"

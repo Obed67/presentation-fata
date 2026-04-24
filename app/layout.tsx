@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "fata — Présentation",
+  title: "Présentation de fata",
   description:
     "Présentation interactive : fata, application d’apprentissage de la programmation pour la jeunesse africaine.",
 };
