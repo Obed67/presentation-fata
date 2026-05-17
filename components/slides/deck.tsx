@@ -186,18 +186,6 @@ export function Slide05Mission() {
           Savoir faire, pouvoir faire
         </p>
       </SlideReveal>
-      <SlideReveal delay={0.14}>
-        <p
-          className={cn(
-            slideTitle,
-            "mx-auto max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg",
-          )}
-        >
-          Numérique accessible :{" "}
-          <span className="text-foreground">mobile</span>,{" "}
-          <span className="text-foreground">web</span>, au rythme de chacun.
-        </p>
-      </SlideReveal>
     </SlideLayout>
   );
 }
@@ -205,7 +193,7 @@ export function Slide05Mission() {
 const HOW_PILLARS = [
   {
     title: "Apprendre vite",
-    text: "Micro-leçons, XP, classements. Rester motivé au quotidien.",
+    text: "Leçons, Vidéos, XP, Classements.",
   },
   {
     title: "Coder pour de vrai",
@@ -294,7 +282,7 @@ export function Slide07Retention() {
     "Badges",
     "Classement",
     "Challenges journaliers",
-    "Récompenses (événements)",
+    "Défis",
     "Progression comme un jeu",
     "C'est un vrai jeu",
   ];
@@ -329,7 +317,7 @@ export function Slide07Retention() {
 
 export function Slide09Impact() {
   const items = [
-    "Formation de talents",
+    "Accès à la tech",
     "Opportunités",
     "Transformation digitale",
   ];
