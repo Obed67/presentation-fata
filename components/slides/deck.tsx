@@ -117,15 +117,15 @@ export function Slide04WhatIsFata() {
   const pillars = [
     {
       label: "Vision",
-      text: "Un accès équitable aux compétences tech et à l’entrepreneuriat numérique.",
+      text: "Un accès équitable aux compétences tech.",
     },
     {
       label: "Mission",
-      text: "Accélérer l’apprentissage numérique pour la jeunesse africaine.",
+      text: "Accélérer l’apprentissage numérique.",
     },
     {
       label: "Axes",
-      text: "Emploi & initiative, confiance en soi, compétences concrètes, rayonnement de l’Afrique connectée.",
+      text: "Emploi & initiative économique, confiance en soi, compétences concrètes.",
     },
   ] as const;
   return (
