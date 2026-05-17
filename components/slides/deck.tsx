@@ -105,7 +105,7 @@ export function Slide03RealProblem() {
             "mx-auto max-w-xl text-base text-muted-foreground sm:text-lg",
           )}
         >
-          Le vrai problème n’est pas le talent — c’est l’environnement
+          Le vrai problème n’est pas le talent c’est l’environnement
           d’apprentissage.
         </p>
       </SlideReveal>
